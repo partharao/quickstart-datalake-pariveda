@@ -308,7 +308,7 @@
                     "DataTraceEnabled": true,
                     "HttpMethod": "GET",
                     "LoggingLevel": "INFO",
-                    "ResourcePath": "/*"
+                    "ResourcePath": "/"
                 }],
                 "RestApiId": {
                     "Ref": "DeliverApi"

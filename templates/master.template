@@ -382,7 +382,7 @@
         "LambdaCopyStack": {
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
-                "TemplateURL": {"Fn::Sub": "https://${QSS3BucketName}.s3.amazonaws.com/${QSS3KeyPrefix}templates/lambdacode.template"},
+                "TemplateURL": {"Fn::Sub": "https://deliver-edited-template.s3.us-east-2.amazonaws.com/templates/lambdacode.template"},
                 "TimeoutInMinutes": "60",
                 "Parameters": {
                     "StackSuffix" : { "Ref" : "StackSuffix" },
@@ -405,7 +405,7 @@
             "DependsOn": ["LambdaCopyStack"],
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
-                "TemplateURL": {"Fn::Sub": "https://${QSS3BucketName}.s3.amazonaws.com/${QSS3KeyPrefix}templates/imet.template"},
+                "TemplateURL": {"Fn::Sub": "https://deliver-edited-template.s3.us-east-2.amazonaws.com/templates/imet.template"},
                 "TimeoutInMinutes": "60",
                 "Parameters": {
                     "StackSuffix" : { "Ref" : "StackSuffix" },
@@ -423,7 +423,7 @@
             "DependsOn": ["LambdaCopyStack"],
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
-                "TemplateURL": {"Fn::Sub": "https://${QSS3BucketName}.s3.amazonaws.com/${QSS3KeyPrefix}templates/sagemaker.template"},
+                "TemplateURL": {"Fn::Sub": "https://deliver-edited-template.s3.us-east-2.amazonaws.com/templates/sagemaker.template"},
                 "TimeoutInMinutes": "60",
                 "Parameters": {
                     "StackSuffix" : { "Ref" : "StackSuffix"},
@@ -453,7 +453,7 @@
             "DependsOn": ["LambdaCopyStack"],
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
-                "TemplateURL": {"Fn::Sub": "https://${QSS3BucketName}.s3.amazonaws.com/${QSS3KeyPrefix}templates/deliver.template"},
+                "TemplateURL": {"Fn::Sub": "https://deliver-edited-template.s3.us-east-2.amazonaws.com/templates/deliver.template"},
                 "TimeoutInMinutes": "60",
                 "Parameters": {
                     "StackSuffix" : { "Ref" : "StackSuffix" },
@@ -469,7 +469,7 @@
         "DashboardStack": {
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
-                "TemplateURL": {"Fn::Sub": "https://${QSS3BucketName}.s3.amazonaws.com/${QSS3KeyPrefix}templates/dashboard.template"},
+                "TemplateURL": {"Fn::Sub": "https://deliver-edited-template.s3.us-east-2.amazonaws.com/templates/dashboard.template"},
                 "TimeoutInMinutes": "2",
                 "Parameters": {
                     "StackSuffix" : { "Ref" : "StackSuffix" }
@@ -480,7 +480,7 @@
             "Type": "AWS::CloudFormation::Stack",
             "Condition": "CreateNotebook",
             "Properties": {
-                "TemplateURL": {"Fn::Sub": "https://${QSS3BucketName}.s3.amazonaws.com/${QSS3KeyPrefix}templates/sagemakernotebook.template"},
+                "TemplateURL": {"Fn::Sub": "https://deliver-edited-template.s3.us-east-2.amazonaws.com/templates/sagemakernotebook.template"},
                 "TimeoutInMinutes": "10",
                 "Parameters": {
                     "StackSuffix" : { "Ref" : "StackSuffix" },
